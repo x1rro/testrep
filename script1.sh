@@ -1,11 +1,11 @@
 #!/bin/bash
 
-a=5
-b=6
+a1=Hello
+a2="hello"
 
-if [ "$a" -le "$b" ]
-then 
-echo "а меньше б"
+if [ $a1 \> $a2 ]
+then
+echo "a1 greater then a2"
 else
-echo "а не меньше b"
+echo "a1 is less then a2"
 fi
