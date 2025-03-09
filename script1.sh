@@ -1,10 +1,11 @@
 #!/bin/bash
 
-user="vboxuser"
+a=5
+b=6
 
-if [ "$user" = "$USER" ]
+if [ "$a" -le "$b" ]
 then 
-echo "User $user is current user"
+echo "а меньше б"
 else
-echo "User $user isnt current user"
+echo "а не меньше b"
 fi
