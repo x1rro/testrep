@@ -1,13 +1,10 @@
 #!/bin/bash
 
-mycomputer="honor"
-myOS=`uname -a`
+user="vboxuser"
 
-echo "Name script is $0"
-echo "Privet $1"
-echo "Hello $2"
-
-num1=50
-num2=45
-summa=$((num1+num2))
-echo "$num1 + $num2 = $summa"
+if [ "$user" = "$USER" ]
+then 
+echo "User $user is current user"
+else
+echo "User $user isnt current user"
+fi
