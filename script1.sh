@@ -1,14 +1,13 @@
 #!/bin/bash
 
-dir="/etc/*"
-
-for file in $dir
+dir="/etc/passwd"
+IFS='\n'
+for entry in $(cat $dir)
 do
-if [ -d $file ]
-then
-echo "$file is directory"
-elif [ -f $file ]
-then 
-echo "$file is file"
-fi
+echo "Values in $entry -"
+IFS=:
+for value in $entry
+do
+echo " $value"
+done
 done
