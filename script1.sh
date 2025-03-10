@@ -1,7 +1,14 @@
 #!/bin/bash
 
-for((i = 0;i < 10; i++))
+dir="/etc/*"
+
+for file in $dir
 do
-echo "Number is $i"
+if [ -d $file ]
+then
+echo "$file is directory"
+elif [ -f $file ]
+then 
+echo "$file is file"
+fi
 done
-echo (("5"+"5"))
